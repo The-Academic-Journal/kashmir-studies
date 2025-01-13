@@ -1,5 +1,5 @@
 # Site
-name: 'Viewpoints & Reflections in Speech-Language and Psychological Sciences'
+name: 'Kashmir Studies'
 description: "a journal for history."
 logo: 'assets/images/logo.jpeg'
 favicon: 'assets/images/favicon.ico'
@@ -25,14 +25,8 @@ authors:
       site:           https://akeboss-tech.github.io/
       role:           Senior Researcher
       bio:            "Hi, I am Akash, the webmaster of this website! I like writing code and articles!"
-      email:          adubey@ucvts.org
+      email:          adubey@rutgers.org
       school:         Rutgers University
-    alan:
-      name:           Alan Ostrovsky
-      role:           Junior Researcher
-      bio:            "Hi, I am Alan Ostrovsky!"
-      email:          no_reply@ucvts.org
-      school:         Stevens University
 
     shivani:
       name:           Shivani Raina

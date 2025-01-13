@@ -1,6 +1,6 @@
 ---
-title: "Contact"
-permalink: "/contribute"
+title: "History"
+permalink: "/history"
 ---
 
 <form action="https://formspree.io/f/{{site.formspree}}" method="POST">    

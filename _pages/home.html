@@ -12,43 +12,25 @@ pagination:
   trail:
   before: 2 # The number of links before the current page
   after: 2 # The number of links after the current page
-description: "A newspaper run by UCVTS Students."
+description: "A website for Kashmir Studies."
 ---
 
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12 text-center">
 
-      <h2 class="font-weight-bold h3 title mb-4">Welcome to Viewpoints & Reflections in Speech-Language and
-        Psychological Sciences</h2>
-      <p class="mb-4">Viewpoints & Reflections in Speech-Language and Psychological Sciences is a scholarly publication dedicated to exploring the theoretical and applied intersections of speech and language development and psychological sciences. The publication serves as a platform for advancing interdisciplinary research and fostering innovative approaches to understanding and addressing issues in communication and psychological development. It publishes open-access articles that examine typical and atypical patterns of communication, cognitive, emotional, and psychological development across the lifespan. This publication welcomes diverse methodologies and perspectives, including experimental, clinical, and theoretical research, to inform and enrich the intersections in the fields of speech-language pathology and psychology. By bridging these domains, Viewpoints and Reflections in Speech-Language and Psychological Sciences aims to contribute toward enhancing evidence-based practices, and professional knowledge to promote holistic care for individuals with communication and psychological needs.</p>
+      <h2 class="font-weight-bold h3 title mb-4 text-center">The Kashmir Studies Institute</h2>
 
-      <h2 class="font-weight-bold h4 title">Articles</h2>
-      <!-- add a horizontal line -->
-      <hr class="my-3 mb-4">
-      {% if page.pagination.enabled %}
-      {% assign postlist = paginator.posts %}
-      {% else %}
-      {% assign postlist = site.posts %}
-      {% endif %}
+      <img src="//img1.wsimg.com/isteam/ip/73006863-96b3-4e17-b257-6d29377ba949/download.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:500,cg:true" srcset="" data-ux="Image" data-aid="BACKGROUND_IMAGE_RENDERED" class="text-center">
+      
+      <p class="text-center"> KSI  publishes works on Kashmiri History, Culture, Ecology, Identity, and Book Reviews. </p>
 
-      {% for post in postlist %}
-      {% if post.external_source == blank %}
-      {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
-      {% else %}
-      {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
-      {% endif %}
-      {% assign year = post.date | date: "%Y" %}
-      {% assign tags = post.tags | join: "" %}
-      {% assign categories = post.categories | join: "" %}
+      <div class="text-center">
+        <h3>About Kashmir Studies Institute</h3>
+        <p>Contact : kashmirstudiesinfo@gmail.com</p>
+        <p>This is an open access scholarly platform for publishing works on the history, culture, and ecology related to Kashmir. We are accepting submissions. Email us at kashmirstudiesinfo@gmail.com</p>
 
-      {% include main-loop-card.html %}
-
-      {% endfor %}
-
-      {% if page.pagination.enabled %}
-      {% include pagination.liquid %}
-      {% endif %}
+      </div>
 
     </div>
   </div>
