@@ -2,7 +2,7 @@
 layout: post
 title:  "Pragmatic Issues in Developmental Research"
 author: [ shivani ]
-categories: [  ]
+categories: [ contemporary-history ]
 download: true
 path: _posts/2024/edition_2/2024-05-13-butterfly-effect.md
 open_access: true

@@ -3,16 +3,37 @@ title: "History"
 permalink: "/history"
 ---
 
-<form action="https://formspree.io/f/{{site.formspree}}" method="POST">    
-<p class="mb-4">Please send your message to {{site.name}}. We will reply as soon as possible!</p>
-<div class="form-group row">
-<div class="col-md-6">
-<input class="form-control" type="text" name="name" placeholder="Name*" required>
+<div class="container">
+    {% assign categories = site.posts | map: "categories" | flatten | uniq | sort %}
+    
+    {% for category in categories %}
+        <div class="mb-5">
+            <h2 class="border-bottom pb-2">{{ category | replace: '-', ' ' | capitalize }}</h2>
+            
+            <div class="row">
+                {% for post in site.posts %}
+                    {% if post.categories contains category %}
+                        <div class="col-md-12 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="card-title">
+                                        <a href="{{ post.url | relative_url }}" class="text-dark">{{ post.title }}</a>
+                                    </h3>
+                                    {% if post.author %}
+                                        <small class="text-muted">
+                                            By {% for author in post.author %}{{ author }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+                                        </small>
+                                    {% endif %}
+                                    {% if post.abstract %}
+                                        <p class="card-text mt-3">{{ post.abstract | truncatewords: 50 }}</p>
+                                    {% endif %}
+                                    <a href="{{ post.url | relative_url }}" class="btn btn-primary">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
 </div>
-<div class="col-md-6">
-<input class="form-control" type="email" name="_replyto" placeholder="E-mail Address*" required>
-</div>
-</div>
-<textarea rows="8" class="form-control mb-3" name="message" placeholder="Message*" required></textarea>    
-<input class="btn btn-success" type="submit" value="Send">
-</form>
